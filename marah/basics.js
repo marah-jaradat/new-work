@@ -7,8 +7,8 @@ console.log(percnt);
 //build temp. converter
 let feh = 32;
 
-let celisus = ((feh - 32) * 5) / 9;
-let kelvin = ((feh + 459.67) * 5) / 9;
+let celisus = (feh - 32) * (5 / 9);
+let kelvin = (feh + 459.67) * (5 / 9);
 
 console.log(celisus, kelvin);
 

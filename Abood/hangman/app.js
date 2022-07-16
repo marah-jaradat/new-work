@@ -1,11 +1,21 @@
-const product = {
-  name: "Influance",
-};
+const game1 = new Hangman("Cat", 2);
 
-// hasOwnProperty(): check if the object has a spicefic property or not
+document.querySelector("#puzzle").innerHTML = game1.getPuzzle();
+document.querySelector(
+  "#remainig-guesses"
+).innerHTML = `Remainig guesses: ${game1.numberOfGuesses}`;
+document.querySelector(
+  "#get-status"
+).innerHTML = `Status: ${game1.getStatus()}`;
 
-const myArray = ["first test", "second test"];
-
-const item = "glass cup";
-
-console.log(item);
+window.addEventListener("keypress", function (e) {
+  const guess = String.fromCharCode(e.charCode); // print keyboard letters and numbers to window
+  game1.makeGuess(guess);
+  document.querySelector("#puzzle").innerHTML = game1.getPuzzle();
+  document.querySelector(
+    "#remainig-guesses"
+  ).innerHTML = `Remainig guesses: ${game1.numberOfGuesses}`;
+  document.querySelector(
+    "#get-status"
+  ).innerHTML = `Status: ${game1.getStatus()}`;
+});

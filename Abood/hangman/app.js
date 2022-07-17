@@ -19,3 +19,8 @@ window.addEventListener("keypress", function (e) {
     "#get-status"
   ).innerHTML = `Status: ${game1.getStatus()}`;
 });
+
+getPuzzle((error, puzzle) => {
+  if (error) console.log(`Error: ${error}`);
+  else console.log(puzzle);
+});

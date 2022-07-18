@@ -1,3 +1,24 @@
+let info={
+  name:"Andrew",
+  age: 27,
+  location:"Philadelphia"
+}
+
+console.log(`${info.name} is ${info.age} and lives in ${info.location}`)
+
+info.age=info.age+1
+
+console.log(`${info.name} is ${info.age} and lives in ${info.location}`)
+
+
+info.age=info.age+1
+
+console.log(`${info.name} is ${info.age} and lives in ${info.location}`)
+
+
+
+
+
 // let feh = 32;
 
 // let celisus = ((feh - 32) * 5) / 9;
